@@ -23,7 +23,7 @@ class FizzBuzz
 
   #Loop through the range specified and output Fiz or Buzz etc
   #for i in ARGV[0].to_i..ARGV[1].to_i
-  for i in 1..10
+  for i in 1..100
     puts "(#{i}) #{checkNumber(i)}"
   end 
 end
