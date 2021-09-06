@@ -1,0 +1,9 @@
+This is my first project written using BDD (Behaviour Driven Design) which is similar to the TDD I used to used
+
+The game is FizzBuzz
+
+The objective is to count up from 1 to 100 and use the following rules:
+- When the number is a multiple of 3 we output Fizz
+- When the number is a multiple of 5 we output Buzz
+- When the number is both a multiple of 3 and 5 we output FizzBuzz
+- Otherwise we output the number
