@@ -1,29 +1,32 @@
 class FizzBuzz
 
-  def self.checkNumber(number)
-    if number % 3 == 0 && number % 5 == 0 
-      return "FizzBuzz"    
-    elsif number % 3 == 0
-      return "Fizz"
-    elsif number % 5 == 0
-      return "Buzz"     
-    else
-      return ""
-    end
-  end 
-
-=begin
-  if ARGV.length != 2
-    puts "Expecting exactly 2 arguments"
-    puts "Please specify a start number and end number"
-    puts "Ex. ruby fizzbuzz.rb 1 100"
-    exit
+  def checkNumber num
+    return "FizzBuzz" if is_divisible_by_15?(num)
+    return "Fizz" if is_divisible_by_3?(num)
+    return "Buzz" if is_divisible_by_5?(num)
+    return num
   end
-=end 
 
-  #Loop through the range specified and output Fiz or Buzz etc
-  #for i in ARGV[0].to_i..ARGV[1].to_i
-  for i in 1..100
-    puts "(#{i}) #{checkNumber(i)}"
-  end 
+  def is_divisible_by_3? num
+    return is_divisible_by? num, 3
+  end
+
+  def is_divisible_by_5? num
+    return is_divisible_by? num, 5
+  end
+
+  def is_divisible_by_15? num
+    return is_divisible_by? num, 15
+  end
+
+  def is_divisible_by? numerator, divisor
+    numerator % divisor == 0
+  end
+
+  def play_game
+    for i in 1..100
+      puts "(#{i}) #{checkNumber(i)}"
+    end
+  end
+
 end
